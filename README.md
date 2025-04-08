@@ -1,4 +1,4 @@
-# HyperK_OD_PMT_QualityAssurance
+# HyperK OD PMT Quality Assurance
 
 This repository contains tools, scripts, and documentation for the quality 
 assurance (QA) process of photomultiplier tubes (PMTs) used in the Outer
