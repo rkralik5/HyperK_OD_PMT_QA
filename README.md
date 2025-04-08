@@ -25,6 +25,7 @@ Detector (OD) of the **Hyper-Kamiokande** (HK) experiment.
 To clone the repository:
 ```bash
 git clone https://github.com/rkralik5/HyperK_OD_PMT_QualityAssurance.git
+```
 
 ## Other information
 
