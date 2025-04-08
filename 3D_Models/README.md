@@ -2,4 +2,6 @@
 
 CAD files for the PMT mount used in the QA
 
-Starting scripts copied from [@P3tru][StephaneZoldos]
+Starting scripts copied from [StephaneZoldos (@P3tru)][StephaneZoldosLink]
+
+[StephaneZoldosLink]: https://github.com/P3tru
