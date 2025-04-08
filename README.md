@@ -9,7 +9,7 @@ Detector (OD) of the **Hyper-Kamiokande** (HK) experiment.
 ### [3D Models](3D_Models/)
 - CAD files and STL models for 3D-printed PMT support components.
 
-### [Data Acquisition][DAQ]
+### [Data Acquisition](DAQ)
 - Scripts for interfacing with electronics and acquiring QA data from PMTs.
 - Automation routines for test cycles, data logging, and device control.
 - Scripts for a local or web-based GUI to control the QA procedure and visualize results in real time.
