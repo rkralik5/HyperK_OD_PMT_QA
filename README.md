@@ -17,7 +17,7 @@ Detector (OD) of the **Hyper-Kamiokande** (HK) experiment.
 - Scripts to log and retrieve test results in a structured database.
 
 The current working code for the QA DAQ is in 
-[Hannah Baer's OD_DAQ_skinny]:(https://github.com/Hannah-SB/OD_DAQ_skinny)
+[Hannah Baer's OD_DAQ_skinny](https://github.com/Hannah-SB/OD_DAQ_skinny)
  repository
 
 ### [Documentation](Documentation/)
