@@ -58,7 +58,7 @@
 \maketitle
 \thispagestyle{empty} % Remove page number from title page
 \begin{abstract}
-Description of the Quality Assurance / Quality Control process for the 3'' Outer detector Photo Multiplier Tubes.
+Description of the Quality Control process for the 3'' Outer detector Photo Multiplier Tubes.
 \end{abstract}
 \newpage
 
@@ -226,34 +226,70 @@ Also describe the integration with the HK database and the shift system, expecta
 
 \subsection{Overview}
 \begin{enumerate}
-    \item Finish the dark rate measurement from the previous day/week
-    \item Do a preliminary check of the results and finish the QA
-    \item Save the measured data and make sure they were correctly loaded into the hk database
-    \item Note down the results into the shift logbook
-    \item Turn off the PMTs and wait until the application turns green
-    \item Open the dark boxes and disconnect the PMTs from the splitter boards
-    \item Unload the PMTs from the dark boxes back into the corresponding boxes (carefully check the labels and the bar codes - separate faulty PMTs)
-    \item Move the measured PMTs from previous day/week back into storage room
-    \item (once a week) Batch of PMTs arrive into the `GW' storage room in the university of Toyama (batch of 400 PMTs once a month)
-    \item Subset of PMTs (84 - 140, corresponding to 3-5 days of PMT QA) is separated and transported into the QA room (30 minutes)
-    \item Open the box of PMTs and confirm the PMT labels match with the expectations
-    \item If not already running, start the QA program
-    \item One by one perform the visual inspection of the PMTs
-    \item Load the PMTs one by one - note the position that the PMT is being loaded to, scan the bar code and connect the PMT to the correct corresponding splitter boards
-    \item Close the dark boxes and make sure they are properly light tight
-    \item Turn on all the PMTs into their starting voltage (probably done with a single button in the QA programme)
-    \item Make sure all the PMTs are turned on a charged and communicate with the programme
+    \item Finish measurements from the previous day/week
+    \begin{enumerate}
+      \item Finish the dark rate measurement from the previous day/week
+      \item Do a preliminary check of the results and finish the QA
+      \item Save the measured data and make sure they were correctly loaded into the hk database
+      \item Note down the results into the shift logbook
+      \item Turn off the PMTs and wait until the application turns green 
+    \end{enumerate}
+    \item Unload PMTs from the dark boxes
+    \begin{enumerate}
+      \item Open the dark boxes and disconnect the PMTs from the splitter boards
+      \item Unload the PMTs from the dark boxes back into the corresponding boxes (carefully check the labels and the bar codes - separate faulty PMTs)
+      \item Move the measured PMTs from previous day/week back into storage room
+      \item (once a week) Batch of PMTs arrive into the `GW' storage room in the university of Toyama (batch of 400 PMTs once a month)
+      \item Subset of PMTs (84 - 140, corresponding to 3-5 days of PMT QA) is separated and transported into the QA room (30 minutes)
+      \item Open the box of PMTs and confirm the PMT labels match with the expectations
+    \end{enumerate}
+    \item Visual inspection of the PMTs
+    \begin{enumerate}
+      \item If not already running, start the QA program
+      \item One by one perform the visual inspection of the PMTs
+    \end{enumerate}
+    \item Load the PMTs into the dark boxes
+    \begin{enumerate}
+      \item Load the PMTs one by one - note the position that the PMT is being loaded to, scan the bar code and connect the PMT to the correct corresponding splitter boards
+      \item Close the dark boxes and make sure they are properly light tight
+    \end{enumerate}
+    \item Test the PMT connection and threshold
+    \begin{enumerate}
+      \item Measure the pedestal and noise of each PMT vs discriminator threshold
+      \item Turn on all the PMTs into their starting voltage (probably done with a single button in the QA programme)
+      \item Make sure all the PMTs are turned on a charged and communicate with the programme
+      \item Test the PMT signal by recording a single waveform from each PMT
+    \end{enumerate}
     \item Leave the PMTs alone for at least an hour (ideally during lunch)
-    \item Switch the trigger from the function generator to the LED and check that the LED is on multi-PE setting
-    \item Turn off the function generator and turn on the LEDs
-    \item Check all PMTs are still connected and perform the voltage scan
-    \item Check that all waveforms, charge distributions and gain curves look reasonable (ideally live as the PMTs are being measured)
-    \item In the meantime, you can help transport PMTs between storage and QA areas
-    \item Change the LED setting to single PE setting
-    \item Set all the PMTs to their operational voltage
-    \item Do the single PE measurement (should only take about 10 minutes)
-    \item Check the results of the single PE measurement
-    \item Turn off the lights and start the dark rate measurement
+    \item Perform the voltage scan
+    \begin{enumerate}
+      \item Make sure all PMTs are set to the starting voltage (900 V)
+      \item Switch the trigger from the function generator to the LED and check that the LED is on multi-PE setting
+      \item Turn off the function generator and turn on the LEDs
+      \item Check all PMTs are still connected and perform the voltage scan
+      \item Check that all waveforms, charge distributions and gain curves look reasonable (ideally live as the PMTs are being measured)
+      \item In the meantime, you can help transport PMTs between storage and QA areas
+      \item Once the voltage scan is finished, check the results and save them into the database
+    \end{enumerate}
+    \item Perform the single PE measurement
+    \begin{enumerate}
+      \item Change the LED setting to single PE setting
+      \item Set all the PMTs to their operational voltage
+      \item Do the single PE measurement (should only take about 10 minutes)
+      \item Check the results of the single PE measurement
+      \item Save the results into the database
+      \item Write down the results into the logbook
+    \end{enumerate}
+    \item Perform the dark rate measurement
+    \begin{enumerate}
+      \item Turn off the LEDs and turn on the function generator
+      \item Turn off the lights and start the dark rate measurement
+    \end{enumerate}
+    \item Finish the shift
+    \begin{enumerate}
+      \item Make sure all the results are saved into the database and logbook
+      \item Compile a written report and send it to the shift leader/google drive
+    \end{enumerate}
 \end{enumerate}
 
 \subsection{Shifts}
