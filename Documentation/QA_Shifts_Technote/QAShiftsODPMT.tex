@@ -56,197 +56,66 @@
 
 \begin{document}
 \maketitle
-\thispagestyle{empty} % Remove page number from title page
-\begin{abstract}
-Description of the Quality Control process for the 3'' Outer detector Photo Multiplier Tubes.
-\end{abstract}
+%\thispagestyle{empty} % Remove page number from title page
+
+\tableofcontents
 
 \vspace*{1cm}
 
 \section{Introduction}
 
-Mainly discuss safety considerations (any heavy lifting work? anything else?), description of the work - what part of the work will be done by whom exactly (shifter 1, shifter 2).
+Each Hyper-Kamiokande Outer Detector (OD) photomultiplier tube (PMT) will undergo quality assurance (QA) to assess performance and ensure reliable long-term operation. The OD PMT QA program consists of a series of electrical and optical tests performed on PMTs after delivery and prior to their integration into PMT+WLS units and installation.
 
-What kind of team organisation is there going to be? (shift leader and one in training), how does it align with the OD PMT assembly?
+This technical note describes the shift work associated with the OD PMT QA, with a particular focus on personnel roles, shift organisation, training requirements, and safety considerations. It is intended to support safety review and shift planning for the QA task.
 
-If we would like to hire external workers (like Toyama university students)
+A detailed description of the QA setup, procedures, performance metrics, timeline, and acceptance criteria is outside the scope of this document and will be covered in dedicated OD PMT QA documentation. Interfaces with other OD activities, including PMT delivery, storage, and assembly, are described in the corresponding OD installation procedures, logistics, and instructions technical note~\cite{ODAssemblyTN}.
 
+\section{Shift work}\label{secShiftWork}
 
-What is the general purpose of the Quality Assurance (QA) process for the PMTs.
+The OD PMT QA work will take place in a ground-floor room at the University of Toyama. PMTs will be stored before and after QA in a separate ground-floor storage area at the same site. QA will be carried out in the same room as the PMT+WLS unit assembly, within a clearly marked and optically separated area equipped with two dark boxes and the required readout and control equipment.
 
-Describe the space where we will do the QA - maybe only reference Sammy's technote?
+PMTs will be transported between the storage and QA areas at ground level, typically using a trolley to reduce manual handling. As the QA space is shared with other OD activities, including PMT assembly, coordination is required to maintain clear access paths and to separate tasks where needed. Further details of room layout, storage, transportation, and assembly are provided in the OD installation technical note~\cite{ODAssemblyTN}.
 
-HK has 40K inner detector PMTs (50 cm diameter) and 3600 outer detector PMTs (20 cm diameter) with 1ns timing resolution.
+\subsection{Tasks and responsibilities}
+During QA shifts, shifters will handle PMTs and operate the QA test setup. This includes transporting PMTs between storage and the QA workspace, loading and unloading them into dark boxes, and connecting and disconnecting high-voltage (HV) and signal cables. PMTs will be moved in boxes of six, each weighing up to $\sim15$\,kg, while individual PMTs are lightweight. Transport will be assisted by carts or trolleys. Handling of PMT transport boxes during delivery may also be required, depending on final logistics.
+
+Shifter tasks include opening and closing dark boxes, retrieving and positioning PMTs on PMT stands, performing basic visual inspections, scanning and logging PMTs with a barcode scanner, and operating HV and data acquisition systems. These activities involve repetitive handling and working in bent positions. A photo of a PMT on a PMT stand inside a dark box is shown in Fig.~\ref{fig:DarkBoxExample}.
+
+\begin{figure}[hbtp!]
+    \centering
+    \includegraphics[width=0.5\textwidth]{figures/QA_DarkBoxExample.jpg}
+    \caption{A single PMT mounted on a PMT stand inside one of the QA dark boxes. The orange cablle is an optical fibre used to deliver light from an LED pulser (not connected here) to the PMT photocathode and is connected to a cap that is covering and protecting the PMT face.}
+    \label{fig:DarkBoxExample}
+\end{figure}
+
+Shifters will also handle optical fibres, LEDs, and data acquisition hardware such as ADCs, high-voltage power supplies, low-voltage function generator, and a control computer.
+
+The QA shifts may also involve external workers, such as students from the University of Toyama. These workers could perform routine tasks such as transporting PMTs, loading and unloading of PMTs into dark boxes, and basic visual inspections, under the supervision of trained shifters and/or the shift leader.
+
+\subsection{Training and supervision}
+Shifters will receive training in manual handling of PMTs, working with fragile equipment, and basic awareness of high- and low-voltage equipment. Training will also cover scanning and logging PMTs, handling optical fibres and LEDs, operating data acquisition hardware and software, and using carts or trolleys for transport.
+
+Routine QA tasks, such as loading and unloading PMTs, visual inspections, and data acquisition, can be performed independently by trained shifters. An expert will be available for guidance during initial setup, troubleshooting, final data analysis and approval, or any non-routine adjustments to the QA equipment.
+
+All shifters must be aware of potential hazards, including repetitive handling, bent postures, and interaction with HV equipment, and must follow established safety procedures.
+
+External workers, if hired, will receive the same training as regular shifters, including manual handling, awareness of fragile equipment, and basic high-voltage safety. They will perform tasks only under supervision and will not carry out non-routine adjustments to the QA setup.
+
+\subsection{Schedule and workload}
+QA shifts are planned to last up to 8 hours per working day. Shifters will work in pairs to safely handle PMTs, including loading, unloading, transporting between storage and the QA workspace, and performing QA measurements. At least one experienced shift leader will be present near or in Toyama at all times. The total QA campaign is expected to span several weeks, depending on the PMT delivery schedule and testing rate.
+
+\section{Safety considerations}
+The QA work involves working with PMTs and associated equipment, and includes potential hazards related to manual handling, electrical connections, and workspace coordination. Key safety considerations for shifters are summarized below:
 \begin{itemize}
-  \item 2484 in the barrel, and 538 in each of the endcaps, for a total of 3560.
-  \item Allowing for the some distortion of the repeating pattern near the edges of the endcaps it may be possible to add between 32 and 44 more PMTs, although this still needs to be confirmed with the installation group. 
+    \item \textbf{Manual handling:} PMTs will be handled in boxes of six, weighing up to $\sim15$\,kg. Individual PMTs are lightweight. Shifters must use proper lifting techniques and, where possible, use trolleys or carts to transport PMT boxes between storage and the QA workspace. Training in manual handling will be provided.
+    \item \textbf{Working postures:} Loading and unloading PMTs into dark boxes will require bent postures. Shifters should take regular breaks and limit the work in a bent position as much as possible.
+    \item \textbf{Fragile equipment:} PMTs are fragile and must be handled with care to avoid damage. Shifters should follow established procedures for handling, loading, and unloading PMTs, and report any damage or issues immediately. Shifters will wear gloves and safety goggles when handling PMTs to protect against accidental breakage.
+    \item \textbf{Electrical safety:} The QA setup includes high-voltage power supplies and low-voltage function generators. Shifters must be trained in basic electrical safety, avoid contact with live circuits, and follow established procedures for connecting and disconnecting HV cables. The HV power supplies will be automatically turned off when not in use and the QA area will be clearly marked with appropriate signage. The splitters for PMT signal and HV will be enclosed in a protective casing to prevent accidental contact with high-voltage parts and located outside easy reach of shifters. 
+    \item \textbf{Workspace coordination:} The QA area is shared with other OD activities, including PMT assembly. Clear access paths must be maintained, and tasks should be coordinated to avoid interference or hazards.
+    \item \textbf{Emergency procedures:} Shifters must be familiar with emergency procedures, including evacuation routes, first aid locations, and contact information for emergency services.
 \end{itemize}
 
-For construction, we need to deliver 120 PMTs per day of OD construction
-
-The current plan is for PMTs to start arriving to the Univerity of Toyama in the end of September 2026, arriving in batches of 400 PMTs per month. The plan is to perform the QA on $\sim 450$ PMTs per month.
-\begin{enumerate}
-  \item Top endcap: 538 PMTs -- 1.5 months
-  \item Upper barrel: 1242 PMTs\todo{Check these numbers} -- 3 months
-  \item Lower barrel: 1242 PMTs -- 3 months
-  \item Bottom endcap: 538 PMTs -- 1.5 months
-\end{enumerate}
-
-What are the important qualities of the OD PMTs that we want to test in the QA process?
-
-Each PMT is uniquely identified by a manufacturer's serial number, corresponding to a Unique Product Identifier (UPI) Hyper-K identifier. The manufacturer will provide a QR code that will be attached to the PMT cable and will show the serial number, PMT type, date of manufacture, EBB number, and other relevant information. The QR code will be scanned during the QA process and the information will be stored in the Hyper-K database.
-
-Once all the measurements are finished, the box with the measured PMT is closed with a specially-coloured tape to mark it as complete.
-
-\subsection{Space at the University of Toyama}
-\todo{Add images of the location and the room}
-
-How much do we need to mention here? Can we just reference Sammy's technote?
-
-The space in the University of Toyama will be measured for magnetic field and the results will be used to decide where to place the QA equipment. The space is all ready for the QA process and the equipment will be shipped to Japan and installed in the first half of 2026. The space will be equipped with a dark box, a VME crate with HV and DAQ boards, and a computer with the data acquisition software.
-
-\subsection{From Stephane}
-Once installed within Hyper-K, the cavity will be filled with water and the photo-sensing units will not be accessible, so it is essential to ensure that each component of the system performs as expected prior to installation and will continue to do so for the next decades. This section describes the planned QA/QC testing procedure for the 3\inches PMTs that can be divided into two parts: ``Batch tests'' as detailed in Table~\ref{tab:PMTbatchtests} that are performed on every PMT and more detailed ``Characterisation tests'' as detailed in Table~\ref{tab:PMTchartests} that are performed on $\approx 1$\% of the total number of PMTs purchased.\footnote{It may be necessary to review this suite of measurements for feasibility. It may not be possible, for example, to pressure test the PMTs at this stage.}
-The PMTs must pass the batch tests to be installed in the detector, and characterisation tests will only be performed on PMTs that pass the batch test criteria. All characteristics of each PMT, including manufacturer's information and measurements from the QA/QC test-stands, would be stored in separate tables in the central Hyper-K QA/QC database currently being developed. We plan to use and adapt tools developed by the PMT group (collaborating with the 50\,cm PMT and mPMT development work). For instance, the {\it{control}} parameters of the QC are the measured gain parameters. They will be important such that PMTs with similar gains can be matched to the same electronics box for ease of tuning. We would perform a basic statistical analysis of the measurements for each batch of PMTs received to ensure that, on average, the PMTs are consistent with the manufacturer's specifications. On an individual basis, PMTs failing to meet the QA/QC requirements would be excluded from installation in the Hyper-K detector.  The number of PMTs rejected due to failure of the batch tests should be significantly less than 10\%.
-
-\begin{table}[!htb]
-\begin{center}
-\begin{tabular}{p{4cm}|p{4cm}|p{5cm}}
-\hline
-\multicolumn{3}{c}{{\bf Batch Tests}}\\\hline
-{\bf Characteristic}  & {\bf Requirement}   & {\bf Comment }\\ \hline
-Gain 	& $5 \times 10^6$ achieved for $900<V<$1300\,V 	& Measuring gain variation w.r.t HV between [900, 1300]V  \\ \hline
-Stability 	& $<$10\% variation 	& Gain @ $5 \times 10^6$, overnight \\ \hline
-Dark rate 	& $<1$kHz 	& Gain @ $5 \times 10^6$, 20$^\circ$C, overnight\\ \hline
-SPE spectrum & peak-to-valley ratio $>2$, $\sigma_\text{PE} / \mu_\text{PE} = 50\%$ & Gain @ $5 \times 10^6$.\\ \hline
-QE & $>0.8\times$ reference specification & Gain @ $5 \times 10^6$. Relative to common reference per batch \\ \hline
-\end{tabular}
-\caption{\label{tab:PMTbatchtests} QA/QC Batch Tests to be performed on every 8\,cm PMT.}
-\end{center}
-\label{tab-PMTQA_all}
-\end{table}%
-
-\begin{table}[!htb]
-\begin{center}
-\begin{tabular}{p{4cm}|p{4cm}|p{5cm}}\hline
-\multicolumn{3}{c}{{\bf Characterisation Tests}}\\\hline
-\hline
-{\bf Characteristic}  & {\bf Requirement}   & {\bf Comment }\\ \hline
-QE/CE & within 10\% manufacturer specifications & With perpendicular light source at $\ge3$ wavelengths in 300--500\,nm range\\ \hline
-CE at 90$^\circ$ orientation& $<10$\% difference to 0$^\circ$& To test magnetic field effect\\ \hline
-CE as a function of position & & When coupled to WLS plate, use directional source at one wavelength. \\ \hline
-Operation in water & Stable to $<5$\%  & Gain, dark rate and peak-to-valley measured over 24 hour period in $13^\circ$C tank \\ \hline 
-Pressure tolerance & operational after 10\,bar exposure & \\ \hline 
-\end{tabular}
-\caption{\label{tab:PMTchartests}QA/QC Characterisation tests to be performed on $\approx 1$\% of the 8\,cm PMTs.}
-\end{center}
-\label{tab:PMTQA_1percent}
-\end{table}%
-
-\subsubsection{Batch Tests}
-The batch tests would be performed in a dark-box with diffuse light sources injected via optical fibres so as to illuminate each PMT with low fixed-intensity, diffuse light. A typical work-flow could involve spending the day installing the PMTs into the dark-box set-up, ramping to nominal high voltage (to allow the PMTs to stabilise in a dark environment for $\ge4$\,hours) and then collecting charge spectra data with the diffuse source at at least three HV settings and dark current measurements overnight. 950\,V is assumed to be the nominal operation voltage and repeated measurements of the gain should be made at this voltage to assess stability over a 12\,hour period. A common reference PMT, that had been characterised in more detail and confirmed to satisfy quantum efficiency (QE) requirements, would remain in the dark box for each set of measurements allowing for the relative QE to be determined. 
-
-\subsubsection{Characterisation Tests}
-The characterisation tests would be performed individually in a separate dark-box with a directional light source. This would allow to probe the quantum and collection efficiency either at a small selection of standard LED wavelengths (eg. UV, 420\,nm) or better still, using a monochromator to probe wavelength across the range of interest 300--500\,nm. The measurements would be performed with the PMT in two positions differing by a 90$^\circ$ rotation to test the impact of the Earth's magnetic field. These measurements should be compared against the manufacturers specifications and between the PMTs tested within the supplied batch. Any departure from expectations should be discussed for each batch of PMTs supplied. Further measurements will be performed with the PMT attached to a WLS plate to characterise the efficiency across the whole `PMT unit'. 
-
-A further important property to test is the waterproofing and pressure rating of the PMTs. Since this requires submerging the PMTs in water for measurement, it is not feasible to include in the batch testing process and likely will require a dedicated setup. Such tests should be performed separately on $\ge$1\% of the PMTs to confirm they operate stably under water.
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%
-%%%                       Quality Assurance procedure
-%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Quality Assurance procedure}\label{secQAProcedure}
-
-General overview of the QA procedures, what measurements we want to do, how much time will each measurement take, how will the day-to-day of the QA shift look like, how many PMTs do we plan to measure,,..?
-
-Should I also discuss the plans for the testing of the QA procedure that will happen in the first half of 2026?
-
-Also describe the integration with the HK database and the shift system, expectations of the shifters and so on.
-
-\subsection{Procedure}
-
-\subsection{Requirements}
-
-
-\subsection{Inventory}
-
-\subsection{Overview}
-\begin{enumerate}
-    \item Finish measurements from the previous day/week (expert)
-    \begin{enumerate}
-      \item Finish the dark rate measurement from the previous day/week
-      \item Do a preliminary check of the results and finish the QA
-      \item Save the measured data and make sure they were correctly loaded into the hk database
-      \item Note down the results into the shift logbook
-      \item Turn off the PMTs and wait until the application turns green 
-    \end{enumerate}
-    \item Unload PMTs from the dark boxes (shifter)
-    \begin{enumerate}
-      \item Open the dark boxes and disconnect the PMTs from the splitter boards
-      \item Unload the PMTs from the dark boxes back into the corresponding boxes (carefully check the labels and the bar codes - separate faulty PMTs)
-      \item Move the measured PMTs from previous day/week back into storage room
-      \item (once a week) Batch of PMTs arrive into the `GW' storage room in the university of Toyama (batch of 400 PMTs once a month)
-      \item Subset of PMTs (84 - 140, corresponding to 3-5 days of PMT QA) is separated and transported into the QA room (30 minutes)
-      \item Open the box of PMTs and confirm the PMT labels match with the expectations
-    \end{enumerate}
-    \item Visual inspection of the PMTs (shifter)
-    \begin{enumerate}
-      \item If not already running, start the QA program
-      \item One by one perform the visual inspection of the PMTs
-    \end{enumerate}
-    \item Load the PMTs into the dark boxes (shifter)
-    \begin{enumerate}
-      \item Load the PMTs one by one - note the position that the PMT is being loaded to
-      \item scan the bar code and connect the PMT to the correct corresponding splitter boards
-      \item Close the dark boxes and make sure they are properly light tight
-    \end{enumerate}
-    \item Test the PMT connection and threshold
-    \begin{enumerate}
-      \item Measure the pedestal and noise of each PMT vs discriminator threshold
-      \item Turn on all the PMTs into their starting voltage (probably done with a single button in the QA programme)
-      \item Make sure all the PMTs are turned on a charged and communicate with the programme
-      \item Test the PMT signal by recording a single waveform from each PMT
-    \end{enumerate}
-    \item Leave the PMTs alone for at least an hour (ideally during lunch)
-    \item Perform the voltage scan
-    \begin{enumerate}
-      \item Make sure all PMTs are set to the starting voltage (900 V)
-      \item Switch the trigger from the function generator to the LED and check that the LED is on multi-PE setting
-      \item Turn off the function generator and turn on the LEDs
-      \item Check all PMTs are still connected and perform the voltage scan
-      \item Check that all waveforms, charge distributions and gain curves look reasonable (ideally live as the PMTs are being measured)
-      \item In the meantime, you can help transport PMTs between storage and QA areas
-      \item Once the voltage scan is finished, check the results and save them into the database
-    \end{enumerate}
-    \item Perform the single PE measurement
-    \begin{enumerate}
-      \item Change the LED setting to single PE setting
-      \item Set all the PMTs to their operational voltage
-      \item Do the single PE measurement (should only take about 10 minutes)
-      \item Check the results of the single PE measurement
-      \item Save the results into the database
-      \item Write down the results into the logbook
-    \end{enumerate}
-    \item Perform the dark rate measurement
-    \begin{enumerate}
-      \item Turn off the LEDs and turn on the function generator
-      \item Turn off the lights and start the dark rate measurement
-    \end{enumerate}
-    \item Finish the shift
-    \begin{enumerate}
-      \item Make sure all the results are saved into the database and logbook
-      \item Compile a written report and send it to the shift leader/google drive
-    \end{enumerate}
-\end{enumerate}
-
-\subsection{Shifts}
-The QA shifts are expected to take ... hours, with the expectation that the shifters will be able to perform the QA measurements on their own. The shifts will be done in pairs to help with loading and unloading of the PMTS, as well as with transporting the PMTs between the storage and QA areas. The shifters will be expected to perform the measurements, check the results, and save them into the database and logbook.
-
-There should be at least one experienced shift leader near or in Toyama at all times, who will be able to help with the measurements and answer any questions that the shifters might have. The shift leader will also be responsible for checking the results of the measurements and making sure that they are correctly saved into the database and logbook.
-
 %\FloatBarrier
-%\bibliographystyle{unsrturl}
-%\bibliography{TestBeamCalibrationTechNoteLiterature}
+\bibliographystyle{unsrturl}
+\bibliography{ODPMTQATechNoteLiterature}
 \end{document}
