@@ -60,6 +60,14 @@
 
 \vspace*{1cm}
 
+\section*{Note revision history}
+\begin{itemize}
+    \item v1 (17 December 2025) The first version of this note, as presented to the far detector construction management board (FD CMB).
+    \item v2 (28 January 2026) Re-organizing tasks and responsibilities to have a clearer distinction between roles of expert and shifter. Expanded on schedule description. Presented to the FD3 and FD CMB.
+    \item v3 (30 January 2026) Improved schedule description and added estimate for total number of shifts.
+\end{itemize}
+
+\newpage
 \section{Introduction}
 
 Each Hyper-Kamiokande Outer Detector (OD) photomultiplier tube (PMT) will undergo quality assurance (QA) to assess performance and ensure reliable long-term operation. The OD PMT QA program consists of a series of electrical and optical tests performed on PMTs after delivery and prior to their integration into PMT+WLS units and installation.
@@ -70,7 +78,7 @@ A detailed description of the QA setup, procedures, performance metrics, timelin
 
 \section{Shift work}\label{secShiftWork}
 
-The OD PMT QA work will take place in a ground-floor room at the University of Toyama. PMTs will be stored before and after QA in a separate ground-floor storage area at the same site. QA will be carried out in the same room as the PMT+WLS unit assembly, within a clearly marked and optically separated area equipped with two dark boxes and the required readout and control equipment.
+The OD PMT QA work will take place in a ground-floor room at the University of Toyama. PMTs will be stored before and after QA in a separate ground-floor storage area in a different building at the same site. QA will be carried out in the same room as the PMT+WLS unit assembly, within a clearly marked and optically separated area equipped with two dark boxes and the required readout and control equipment.
 
 PMTs will be transported between storage and QA areas at ground level, typically using a trolley to reduce manual handling. The shifters will keep all the necessary equipment, including carts or trolleys, in designated areas within the OD rooms. As the QA space is shared with other OD activities, including PMT assembly, coordination is required to maintain clear access paths and separate tasks where needed. Further details of room layout, storage, transportation, and assembly are provided in the OD installation technical note~\cite{ODAssemblyTN}.
 
@@ -80,7 +88,7 @@ QA shifts involve the following tasks:
     \item Transport of PMTs between storage and the QA workspace using carts or trolleys
     \begin{itemize}
         \item PMTs will be in transport boxes containing six PMTs each
-        \item Each box weighs up to $\sim13$\,kg
+        \item Each box weighs up to $13$\,kg
     \end{itemize}
     \item Loading and unloading PMTs into dark boxes and positioning them on PMT stands
     \begin{itemize}
@@ -132,7 +140,7 @@ Regular QA shifters are trained collaborators certified to perform routine QA ta
 \end{itemize}
 
 \subsubsection*{External workers}
-The QA shifts may also involve external workers, such as students from the University of Toyama. These workers could perform routine tasks such as
+The QA shifts may also involve external workers, such as students from the University of Toyama. We should note that at the moment we do not expect to employ any external workers. These workers could perform routine tasks such as
 \begin{itemize}
     \item transporting PMTs
     \item loading and unloading of PMTs into dark boxes
@@ -146,21 +154,36 @@ All shifters, including external workers, will receive training by an expert at 
 If all shifters are experienced shifters, this training can be omitted. In any case, the experts must ensure that all the shifters are aware of potential hazards, including repetitive handling, bent postures, and interaction with HV equipment, and must follow established safety procedures.
 
 \subsection{Schedule and workload}
-QA shifts are planned to last up to 8 hours per working day. The shifters will work in pairs to safely handle PMTs, including loading, unloading, transporting between storage and the QA workspace, and performing QA measurements. At least one experienced shift leader will be present near or in Toyama at all times.
+QA shifts are planned to last up to 8 hours per working day. Shifters will work in pairs to safely handle PMTs, including loading and unloading, transport between the storage area and the QA workspace, and performing QA measurements. At least one experienced shift leader will be present in or near Toyama at all times. The current processing rate is 29 PMTs per day, however work is ongoing to increase this rate to reduce the total number of required shifts.
 
-The total number of QA shifts and the detailed schedule depend on the PMT delivery schedule. The preliminary plan assumes the start of PMT deliveries at the end of July 2026, with approximately 300–400 PMTs delivered monthly thereafter, as shown in Fig.~\ref{fig:PMTDeliverySchedule}. We plan to test all PMTs within a month of delivery. The QA campaign is expected to continue until the completion of PMT deliveries, which is currently planned for April 2027.
+The total number of QA shifts and the detailed schedule depend on the timeline of the PMT delivery. The preliminary delivery plan assumes the first shipment at the end of July 2026, followed by monthly deliveries of approximately 300–400 PMTs, for a total of 3,650 PMTs (Tab.~\ref{tab:PMTDeliverySchedule}). The goal is to test each batch within one month of delivery. The QA campaign will therefore continue until a month after the final delivery, currently planned for May 2027. Based on the present processing rate, the full QA programme is expected to require approximately 126 shift days, totalling 252 QA shifts.
 
-\begin{figure}
+\begin{table}
     \centering
-    \includegraphics[width=0.8\linewidth]{figures/PMTDeliverySchedule_Jan2026.png}
     \caption{Preliminary schedule of the PMT delivery as of January 2026.}
-    \label{fig:PMTDeliverySchedule}
-\end{figure}
+    \label{tab:PMTDeliverySchedule}
+    \begin{tabular}{|m{25mm}|m{18mm}m{18mm}m{18mm}|m{12mm}|}\hline
+        \multirow{2}{25mm}{\textbf{Delivery date}} & \multicolumn{3}{|c|}{\textbf{Number of PMTs by cable length}} & \multirow{2}{*}{\textbf{Total}} \\
+         & \textbf{15 m} & \textbf{20 m} & \textbf{30 m} & \\ \hline
+        2026/07/24 & 80   & 0    & 220 & 300 \\
+        2026/08/21 & 300  & 0    & 0   & 300 \\
+        2026/09/25 & 0    & 300  & 0   & 300 \\
+        2026/10/23 & 400  & 0    & 0   & 400 \\
+        2026/11/27 & 0    & 400  & 0   & 400 \\
+        2026/12/25 & 400  & 0    & 0   & 400 \\\hline
+        2027/01/22 & 0    & 400  & 0   & 400 \\
+        2027/02/26 & 335  & 15   & 0   & 350 \\
+        2027/03/19 & 0    & 400  & 0   & 400 \\
+        2027/04/23 & 200  & 200  & 0   & 400 \\ \hline\hline 
+        Total      & 1715 & 1715 & 220 & 3650 \\\hline
+    \end{tabular}
+    
+\end{table}
 
 \section{Safety considerations}
 The QA work involves working with PMTs and associated equipment, and includes potential hazards related to manual handling, electrical connections, and workspace coordination. Key safety considerations for shifters are summarized below:
 \begin{itemize}
-    \item \textbf{Manual handling:} PMTs will be handled in boxes of six, weighing up to $\sim13$\,kg. Individual PMTs are lightweight. Shifters must use proper lifting techniques and, where possible, use trolleys or carts to transport PMT boxes between storage and the QA workspace. Training in manual handling will be provided.
+    \item \textbf{Manual handling:} PMTs will be handled in boxes of six, weighing up to $13$\,kg. Individual PMTs are lightweight. Shifters must use proper lifting techniques and, where possible, use trolleys or carts to transport PMT boxes between storage and the QA workspace. Training in manual handling will be provided.
     \item \textbf{Working postures:} Loading and unloading PMTs into dark boxes will require bent postures and repetitive bending. Shifters should take regular breaks as they see fit and the shifts will be optimized to limit the work in a bent position as much as possible.
     \item \textbf{Fragile equipment:} PMTs are fragile and must be handled with care to avoid damage. Shifters should follow established procedures for handling, loading, and unloading PMTs, and report any damage or issues to the expert immediately. Shifters will wear gloves and safety goggles when handling PMTs to protect against accidental breakage.
     \item \textbf{Electrical safety:} The QA setup includes high-voltage power supplies and low-voltage function generators. Shifters must be trained in basic electrical safety, avoid contact with live circuits, and follow established procedures for connecting and disconnecting HV cables. The HV power supplies will be automatically turned off when not in use and the QA area will be clearly marked with appropriate signage. The splitters for PMT signal and HV will be enclosed in a protective casing to prevent accidental contact with high-voltage parts and located outside easy reach of shifters. 
