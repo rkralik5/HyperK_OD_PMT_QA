@@ -46,9 +46,9 @@
 
 \newcommand{\inches}{$''$\xspace}
 
-\author{Róbert Králik for the FD3 group}
+\author{Róbert Králik and Sammy Valder for the FD3 group}
 %\affil[1]{King's College London, UK}
-\title{\textbf{Shift overview for the Quality Assurance of the 3\inches OD PMTs\\ \vspace*{5mm}
+\title{\textbf{Shift Overview for the Outer Detector Preparation Tasks\\ \vspace*{5mm}
 \Large{Technical Note}}}
 \date{\today}
 
@@ -65,102 +65,28 @@
     \item v1 (17 December 2025) The first version of this note, as presented to the far detector construction management board (FD CMB).
     \item v2 (28 January 2026) Re-organizing tasks and responsibilities to have a clearer distinction between roles of expert and shifter. Expanded on schedule description. Presented to the FD3 and FD CMB.
     \item v3 (30 January 2026) Improved schedule description and added estimate for total number of shifts.
+    \item v4 (20 March 2026) Added the OD module assembly and combined it with the QA shifts. Added discussion on the weekly and long-term shift schedule. Improved calculation of the number of shifts required. Change shift personnel categories to shifter, shift leader and FD3 expert. Added information on the location and transportation. Separated PPE into a separate section.
 \end{itemize}
 
-\newpage
-\section{Introduction}
 
-Each Hyper-Kamiokande Outer Detector (OD) photomultiplier tube (PMT) will undergo quality assurance (QA) to assess performance and ensure reliable long-term operation. The OD PMT QA program consists of a series of electrical and optical tests performed on PMTs after delivery and prior to their integration into PMT+WLS units and installation.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-This technical note describes the shift work associated with the OD PMT QA, with a particular focus on personnel roles, shift organisation, training requirements, and safety considerations. It is intended to support safety review and shift planning for the QA task.
+%\newpage
+\section{Introduction} \label{sec:intro}
 
-A detailed description of the QA setup, procedures, performance metrics, timeline, and acceptance criteria is outside the scope of this document and will be covered in the dedicated OD PMT QA documentation. Interfaces with other OD activities, including PMT delivery, storage, and assembly, are described in the corresponding OD installation procedures, logistics, and instructions technical note~\cite{ODAssemblyTN}.
+The Hyper-K Outer Detector (OD) installation is due to begin in January~2027. Before then, 3650~OD PMTs will need to undergo quality assurance (QA) and be assembled together with wavelength-shifting (WLS) plates and tyvek sheets into OD PMT units. The OD PMT QA programme consists of a series of electrical and optical tests performed on every PMT after delivery, ensuring long-term reliable operation. PMTs that pass QA are then combined with a WLS plate, a mounting plate, and a 50~cm~$\times$~50~cm sheet of Tyvek to form an assembled OD PMT unit. All of these tasks will be performed at the University of Toyama and are grouped together as `OD Preparation Shifts'.
 
-\section{Shift work}\label{secShiftWork}
+This technical note focuses on the personnel roles, shift organisation, training and safety considerations and is intended to support the safety review of safety and shift planning. A detailed description of the QA is presented in TN-XXX\footnote{The dedicated QA technical note is not yet finalised and published, but will be shared with the collaboration later.}, while other preparation activities, including PMT delivery, storage, and assembly, are presented in TN-115~\cite{ODAssemblyTN}.
 
-The OD PMT QA work will take place in a ground-floor room at the University of Toyama. PMTs will be stored before and after QA in a separate ground-floor storage area in a different building at the same site. QA will be carried out in the same room as the PMT+WLS unit assembly, within a clearly marked and optically separated area equipped with two dark boxes and the required readout and control equipment.
+\section{Shifts} \label{sec:shifts}
+OD preparation shifts consist of three main activities: PMT transportation between the storage and QA/assembly areas, PMT QA, and OD unit assembly. QA and assembly will be performed in parallel, each requiring two shifters, while transport tasks are carried out as needed by all the shifters. Depending on workload, shifts will therefore involve either two or four personnel.
 
-PMTs will be transported between storage and QA areas at ground level, typically using a trolley to reduce manual handling. The shifters will keep all the necessary equipment, including carts or trolleys, in designated areas within the OD rooms. As the QA space is shared with other OD activities, including PMT assembly, coordination is required to maintain clear access paths and separate tasks where needed. Further details of room layout, storage, transportation, and assembly are provided in the OD installation technical note~\cite{ODAssemblyTN}.
-
-\subsection{Tasks and responsibilities}
-QA shifts involve the following tasks:
-\begin{enumerate}
-    \item Transport of PMTs between storage and the QA workspace using carts or trolleys
-    \begin{itemize}
-        \item PMTs will be in transport boxes containing six PMTs each
-        \item Each box weighs up to $13$\,kg
-    \end{itemize}
-    \item Loading and unloading PMTs into dark boxes and positioning them on PMT stands
-    \begin{itemize}
-        \item Individual PMTs are lightweight
-        \item A photo of a PMT on a stand inside a dark box is shown in Fig.~\ref{fig:DarkBoxExample}
-    \end{itemize}
-    \item Connecting and disconnecting PMT cables from high-voltage/signal splitters
-    \item Operation of high-voltage power supplies, analog-to-digital converters, low-voltage function generator, and a control computer
-    \item Handling of optical fibres and LEDs
-    \item Basic visual inspection of PMTs
-    \item Scanning and logging PMTs using a barcode scanner
-    \item Operating data acquisition software, recording and checking QA data, logging results in the database
-    \item Deciding on the acceptance or rejection of PMTs
-    \item (Potentially) handling PMT transport boxes during delivery
-\end{enumerate}
-
-\begin{figure}[hbtp!]
-    \centering
-    \includegraphics[width=0.5\textwidth]{figures/QA_DarkBoxExample.jpg}
-    \caption{A single PMT mounted on a PMT stand inside one of the QA dark boxes. The orange cablle is an optical fibre used to deliver light from an LED pulser (not connected here) to the PMT photocathode and is connected to a cap that is covering and protecting the PMT face.}
-    \label{fig:DarkBoxExample}
-\end{figure}
-
-QA shifts involve three categories of personnel: experts, regular shifters, and, potentially, external workers. Their roles and responsibilities are defined below.
-
-\subsubsection*{Experts}
-The QA expert is responsible for the overall operation and integrity of the QA process. The expert will:
-\begin{itemize}
-    \item Oversee the initial setup of the QA system and approve any non-routine changes to the setup or procedures
-    \item Perform training of shifters in the beginning of the shift block
-    \item Provide guidance during troubleshooting and abnormal situations
-    \item Perform or approve final data analysis and decide on PMT acceptance
-    \item Ensure that QA results are correctly uploaded to the database
-\end{itemize}
-The expert does not need to be physically present for routine QA shifts but must be available locally or remotely for consultation. The experts can help and perform regular QA shift when necessary. The expert responsibilities may be shared with other OD tasks if this proves viable.
-
-\subsubsection*{Regular shifters}
-QA shifts are performed by two regular shifters working together. At least one of the shifter should be experienced from a previous QA shift.
-
-Regular QA shifters are trained collaborators certified to perform routine QA tasks independently. During QA shifts, they will:
-\begin{itemize}
-    \item Transport PMTs between storage and the QA workspace using carts or trolleys
-    \item Load and unload PMTs into dark boxes and position them on PMT stands
-    \item Scan and log PMTs using a barcode scanner
-    \item Perform basic visual inspection of PMTs
-    \item Connect PMT cables to HV/signal splitters
-    \item Operate the HV and data acquisition software and hardware
-    \item Perform basic analysis of results and upload them to the database
-\end{itemize}
-
-\subsubsection*{External workers}
-The QA shifts may also involve external workers, such as students from the University of Toyama. We should note that at the moment we do not expect to employ any external workers. These workers could perform routine tasks such as
-\begin{itemize}
-    \item transporting PMTs
-    \item loading and unloading of PMTs into dark boxes
-    \item basic visual inspections
-\end{itemize}
-External workers should work under supervision of trained shifters and/or the shift leader.
-
-\subsection{Training and supervision}
-All shifters, including external workers, will receive training by an expert at the beginning of the shift block. Training will include manual handling of PMTs, working with fragile equipment, and basic awareness of high- and low-voltage equipment. It will also cover scanning and logging PMTs, handling optical fibres and LEDs, operating data acquisition hardware and software, and using carts or trolleys for transport.
-
-If all shifters are experienced shifters, this training can be omitted. In any case, the experts must ensure that all the shifters are aware of potential hazards, including repetitive handling, bent postures, and interaction with HV equipment, and must follow established safety procedures.
-
-\subsection{Schedule and workload}
-QA shifts are planned to last up to 8 hours per working day. Shifters will work in pairs to safely handle PMTs, including loading and unloading, transport between the storage area and the QA workspace, and performing QA measurements. At least one experienced shift leader will be present in or near Toyama at all times. The current processing rate is 29 PMTs per day, however work is ongoing to increase this rate to reduce the total number of required shifts.
-
-The total number of QA shifts and the detailed schedule depend on the timeline of the PMT delivery. The preliminary delivery plan assumes the first shipment at the end of July 2026, followed by monthly deliveries of approximately 300–400 PMTs, for a total of 3,650 PMTs (Tab.~\ref{tab:PMTDeliverySchedule}). The goal is to test each batch within one month of delivery. The QA campaign will therefore continue until a month after the final delivery, currently planned for May 2027. Based on the present processing rate, the full QA programme is expected to require approximately 126 shift days, totalling 252 QA shifts.
+\subsection{Schedule}
+The OD preparation shifts are constrained by the PMT delivery schedule, shown in Tab.~\ref{tab:PMTDeliverySchedule}. The first delivery is planned for 24$^{\text{th}}$ July 2026. QA-only shifts are expected to begin in August 2026, with combined QA and assembly shifts starting in September. The overall schedule of PMT delivery, QA, assembly, and installation is shown in Fig.~\ref{fig:shiftschedule}. This schedule is preliminary but provides a representative baseline for planning.
 
 \begin{table}
     \centering
-    \caption{Preliminary schedule of the PMT delivery as of January 2026.}
+    \caption{Preliminary schedule of the OD PMT delivery as of January 2026.}
     \label{tab:PMTDeliverySchedule}
     \begin{tabular}{|m{25mm}|m{18mm}m{18mm}m{18mm}|m{12mm}|}\hline
         \multirow{2}{25mm}{\textbf{Delivery date}} & \multicolumn{3}{|c|}{\textbf{Number of PMTs by cable length}} & \multirow{2}{*}{\textbf{Total}} \\
@@ -177,21 +103,273 @@ The total number of QA shifts and the detailed schedule depend on the timeline o
         2027/04/23 & 200  & 200  & 0   & 400 \\ \hline\hline 
         Total      & 1715 & 1715 & 220 & 3650 \\\hline
     \end{tabular}
-    
 \end{table}
 
-\section{Safety considerations}
-The QA work involves working with PMTs and associated equipment, and includes potential hazards related to manual handling, electrical connections, and workspace coordination. Key safety considerations for shifters are summarized below:
+\begin{figure}
+    \centering
+    \includegraphics[width=\linewidth]{Documentation/QA_Shifts_Technote/figures/ShiftSchedule.png}
+    \caption{A preliminary nominal shift schedule for the full OD preparation and installation throughout the Hyper-K construction phase. This is subject to change and should be used as a nominal reference.}
+    \label{fig:shiftschedule}
+\end{figure}
+
+Shifts are carried out over five working days (Monday to Friday), with a nominal duration of 8 hours per day (09:00–17:00), including a one-hour lunch break. A typical weekly schedule is summarised in Tab.~\ref{tab:typicalweek}. Up to one hour on the first day of the shift is designated to shift training and induction. Additionally, two half-day slots are allocated for the transportation of PMTs and components between the storage and QA/assembly areas. These transport periods provide flexibility and may not always be fully required.
+
+\begin{table}[]
+    \centering
+    \begin{tabular}{ccc}
+        \color{blue!85!black}{\textbf{QA shifters}} &
+        \color{green!65!black}{\textbf{Assembly shifters}} &
+        \color{violet!95!black}{\textbf{All shifters}}
+    \end{tabular}
+    \begin{tabular}{|c|c|c|c|c|c|}
+        \hline
+        & Monday & Tuesday & Wednesday & Thursday & Friday  \\
+        \hline
+        \multirow{2}{*}{AM} &
+        \color{violet!95!black} Training &
+        \color{blue!85!black} QA & \color{blue!85!black} QA & \color{blue!85!black} QA & \color{blue!85!black} QA \\
+        & \color{violet!95!black} Transport & \color{green!65!black} Assembly & 
+        \color{green!65!black} Assembly & \color{green!65!black} Assembly &
+        \color{green!65!black} Assembly \\
+        \hline
+        1 hour & \multicolumn{5}{c|}{Lunch break}\\
+        \hline
+        \multirow{2}{*}{PM} & \color{blue!85!black} Other/Assembly &
+        \color{blue!85!black} Other/Assembly & \color{blue!85!black} Other/Assembly &
+        \color{blue!85!black} Other/Assembly & \color{violet!95!black} \multirow{2}{*}{Transport} \\
+        & \color{green!65!black} Assembly & \color{green!65!black} Assembly &
+        \color{green!65!black} Assembly & \color{green!65!black} Assembly & \\
+        \hline
+    \end{tabular}
+    \caption{A typical week for OD preparation shifts separated into morning and afternoon activities and into responsibilities of QA, assembly, or all shifters.}
+    \label{tab:typicalweek}
+\end{table}
+
+The QA procedure includes an initial setup phase of approximately 3–4 hours, after which data taking proceeds largely automatically. During these periods, shifters may either assist with OD unit assembly or perform additional measurements, depending on operational needs. The scope of such additional measurements will be defined as required.
+
+\subsection{Number of shifts}
+The nominal QA rate is 29 PMTs per day, corresponding to approximately 116 PMTs per week. At this rate, each batch can be processed within approximately three to four weeks, depending on the amount of PMTs delivered. This leaves additional time for contingency, OD unit assembly, or extended measurements if needed.
+
+Figure~\ref{fig:unitspertime} shows the evolution of PMT inventory at different stages (delivered, QA’d, assembled, and installed) under this nominal schedule\footnote{This plot shows an older assumption of QA processing 84~PMTs per week}. The results indicate that the QA rate is close to the delivery-limited maximum. Increasing the QA rate would primarily reduce the total number of required shifts rather than accelerate overall progress. Additional description of the QA and assembly rate, including discussion on a possible increase of the QA rate, is in TN-115~\cite{ODAssemblyTN}.
+
+\begin{figure}
+    \centering
+    \includegraphics[width=\linewidth]{figures/ShiftSchedV2-UnitsOverTime.png}
+    \caption{A plot showing the number of unit types as a function of time throughout the OD preparation and installation schedule.}
+    \label{fig:unitspertime}
+\end{figure}
+
+As shown in Fig.~\ref{fig:shiftschedule}, current estimates indicate 30~weeks for the QA, and 31~weeks for the OD unit assembly, totalling 610~person shifts assuming 5 shifts per week. Optimisation of the QA rate may reduce this to approximately 580 person-shifts. The schedule and progress will be monitored and adjusted as needed during OD preparation.
+
+\subsection{Personnel} \label{sec:personnel}
+OD preparation shifts involve three roles: shifters, shift leaders, and FD3 experts.
+
+Shifters are responsible for carrying out assigned tasks safely and efficiently. They will receive appropriate training and must follow established procedures and risk assessments during all activities.
+
+Shift leaders participate in shifts in the same capacity as shifters, with additional responsibility for coordination, training, and safe operation of the work. They oversee the execution of tasks, handle minor troubleshooting, and make operational decisions during the shift. Shift leaders are responsible for ensuring that all required equipment is prepared and available before the shift, and for informing an FD3 expert if issues arise or equipment is missing. They also ensure that all shifters are properly briefed and have the necessary information to carry out their tasks.
+
+FD3 experts are not required to be physically present during routine shifts but provide support for non-routine situations, typically on call. They are responsible for major decisions affecting QA and assembly procedures, supporting complex troubleshooting, and ensuring that the overall OD preparation remains on schedule.
+
+For emergency response and communication with University of Toyama personnel, at least one person on shift must be able to communicate in Japanese. This person must be familiar with emergency procedures and is responsible for ensuring they are followed during an emergency. Preferably, this role is fulfilled by the shift leader; otherwise, a trained shifter may take this role, and the on-site liaison (Nakano-san) will be informed.
+
+\subsection{Location} \label{sec:location}
+OD preparation shifts will take place at the University of Toyama campus in three main areas: a QA/Assembly room, a storage room, and a shifters’ room. Their locations are shown in Fig.~\ref{fig:ToyamaCampusMap}.
+
+\begin{figure}
+    \centering
+    \includegraphics[width=0.8\linewidth]{figures/ToyamaCampusMap.png}
+    \caption{A map of the University of Toyama campus with key rooms and facilities labelled, including the QA/Assembly room, storage room, and shifters' room (labelled as Student room).}
+    \label{fig:ToyamaCampusMap}
+\end{figure}
+
+The storage and QA/Assembly rooms are located approximately 10~minutes apart on foot and require outdoor transport. Both rooms are on the ground floor, and the route between them includes a gentle incline and small steps at building entrances. Seasonal weather conditions, including snow between December and March, may affect transport and are taken into account in planning. Sufficient PMTs will be stored in the QA/Assembly room to allow flexibility in scheduling transport. Therefore, if conditions do not permit safe transport, the shift leader may reschedule it to a different day.
+
+A separate room for shifters is located on the second floor, where personal items can be stored. This room will also serve as a meeting point at the start of shifts and during breaks, and will be used for training and shift induction.
+
+Access to the relevant rooms will be provided via temporary key cards. The shift leader will be responsible for ensuring access and secure use of the rooms. Nakano-san will act as the primary local contact for the facilities.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Tasks and responsibilities}
+The roles and personnel structure for OD preparation shifts are described in Sec.~\ref{sec:personnel}. The responsibilities associated with each role during the main OD preparation activities are outlined below.
+
+\subsection{Transportation}
+PMTs will be delivered and stored in transport boxes containing six PMTs, with a total weight of approximately 13 kg per box. These boxes will be stacked (typically up to three boxes high) and secured to prevent movement or falling, for example using cling film or similar methods. Assembled units will be stored in flight boxes, each containing six completed units and weighing approximately 13 kg. Flight boxes may be stacked up to four boxes high.
+
+%The WLS plates will be tranported in...\todo{need info} and the mounting components in boxes...\todo{need info}
+
+Transport between the storage room and the QA/Assembly room will be carried out using heavy-duty flatbed trolleys\footnote{The exact size of the trolleys is under discussion.}. A typical transport operation will involve moving multiple PMT boxes, including both pre-QA and post-QA units, as well as WLS plates, mounting hardware, and other components. Two trolleys will be available, each operated by two shifters. To ensure stability and safe handling, boxes will be secured to the trolleys by tying or strapping.
+
+More details on the logistics, including storage and transportation, are described in TN-115~\cite{ODAssemblyTN}.
+
+\subsubsection*{Shifter}
+\begin{enumerate}
+    \item Transport of PMTs, WLS plates, mounting components, and assembled units between storage and the QA/assembly room using trolleys
+    \item Secure loads to ensure stability and safety during transport
+    \item Secure stacked boxes to prevent falling over
+    \item Locate and move the designated flight boxes to be transported into the mine next to the mapped out delivery area of the storage room ready to be collected by the contractor
+    \item (Potentially) handle PMT transport boxes during delivery
+\end{enumerate}
+
+\subsubsection*{Shift leader}
+In addition to the shifter responsibilities, shift leaders are also responsible for:
+\begin{enumerate}
+    \setcounter{enumi}{5}
+    \item Coordinate transport activities
+    \item Decide which boxes and equipment to transport
+    \item Verify that the correct components are transported according to the schedule
+    \item Ensure that transport is carried out safely and adjust or reschedule transport activities if conditions are not favourable
+\end{enumerate}
+
+
+\subsection{QA}
+The QA setup consists of two dark boxes, each holding 15 PMTs, located in a light-tight area built from aluminium profiles covered with dark sheets. Each PMT sits on a plastic stand and is covered with a cap with an attached optical fibre connected to an LED (Fig.~\ref{fig:DarkBoxExample}).
+
+\begin{figure}[hbtp!]
+    \centering
+    \includegraphics[width=0.49\textwidth]{figures/QA_DarkBoxExample.jpg}
+    \includegraphics[width=0.49\textwidth]{figures/QA_PMTStand.jpg}
+    \caption{A single PMT mounted on a PMT stand inside one of the QA dark boxes. The orange cable on the left picture is an optical fibre used to deliver light from an LED pulser (not connected here) to the PMT photo-cathode and is connected to a cap that is covering and protecting the PMT face.}
+    \label{fig:DarkBoxExample}
+\end{figure}
+
+OD PMTs are lightweight, with a permanently attached and waterproofed integrated signal and high-voltage (HV) cable terminating in an SHV connector. Cables connect via SHV adapters on the dark box to custom-built splitters, located in plastic cases outside the dark area, which lead to a CAEN HV supply and ADC unit.
+
+QA measurements are largely automated. Shifters are responsible for connecting PMT SHV cables to the adapters, operating the QA software, and verifying results. Approved results are automatically uploaded to the Hyper-K database.
+
+\subsubsection*{Shifters}
+QA shifts involve the following tasks:
+\begin{enumerate}
+    \item Ensure HV is off before accessing the dark area
+    \begin{enumerate}
+        \item Check the HV monitor programme shows all PMTs off
+        \item Use the "Uninstall PMTs" programme to turn off any active PTMs\footnote{This is not yet implemented.}
+        \item Verify that all channels on the power supply are green (off)
+    \end{enumerate}
+    \item Unload PMTs from boxes and perform visual inspection
+    \item Install and remove PMTs in/from the dark boxes
+    \item Connect and disconnect SHV-terminated PMT cables from SHV adapters
+    \begin{itemize}
+        \item Shifters will \textbf{not} connect cables directly to the ADC, HV, or splitters
+    \end{itemize}
+    \item Scan and log PMTs using a barcode scanner
+    \item Operate QA software, record runtime data, and perform basic analysis
+    \item Upload results to the Hyper-K database
+    \item Print and attach labels to PMTs and boxes
+\end{enumerate}
+
+\subsubsection*{Shift leaders}
+In addition to all shifter tasks, shift leaders are responsible for:
+\begin{enumerate}
+    \setcounter{enumi}{8}
+    \item Oversee the initial setup of the QA system and approve non-routine changes
+    \item Train shifters at the start of the shift block
+    \item Handle troubleshooting of any abnormal situations
+    \item Approve final data analysis and decide on PMT acceptance
+    \item Ensure QA results are correctly uploaded to the database
+    \item Adjust ADC, HV, low-voltage function generator, or LED configuration if necessary
+    \item Connect and disconnect cables and fibres if required for troubleshooting or configuration changes
+\end{enumerate}
+
+
+\subsection{OD unit assembly tasks}
+The OD unit assembly is described in detailed in TN-115~\cite{ODAssemblyTN}. The tasks include:
+\subsubsection*{Shifters}
+\begin{enumerate}
+    \item Unload the boxes with equipment in the QA/Assembly room and store them appropriately in the designated areas of the room.
+    \item Assemble the OD PMT units following the instructions shown in Fig.~\ref{fig:assemblypage1} - \ref{fig:assemblypage4} in the appendix~\ref{app:instructions}. 
+    \item Catalogue the PMT type, WLS plate, and OD PMT unit into the database. Label the OD PMT unit and flight box accordingly.
+    \item Pack the OD PMT units into the correct flight box for the location that PMT will be installed in the tank.
+\end{enumerate}
+
+\subsubsection*{Shift leader}
+In addition to the shifter tasks, the shift leaders do:
+\begin{enumerate}
+    \setcounter{enumi}{4}
+    \item Select PMTs to be assembled based on the OD installation schedule.
+\end{enumerate}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Safety considerations} \label{sec:safety}
+The OD preparation work involves handling PMTs and related equipment, which presents potential hazards. Key safety considerations include:
 \begin{itemize}
-    \item \textbf{Manual handling:} PMTs will be handled in boxes of six, weighing up to $13$\,kg. Individual PMTs are lightweight. Shifters must use proper lifting techniques and, where possible, use trolleys or carts to transport PMT boxes between storage and the QA workspace. Training in manual handling will be provided.
-    \item \textbf{Working postures:} Loading and unloading PMTs into dark boxes will require bent postures and repetitive bending. Shifters should take regular breaks as they see fit and the shifts will be optimized to limit the work in a bent position as much as possible.
-    \item \textbf{Fragile equipment:} PMTs are fragile and must be handled with care to avoid damage. Shifters should follow established procedures for handling, loading, and unloading PMTs, and report any damage or issues to the expert immediately. Shifters will wear gloves and safety goggles when handling PMTs to protect against accidental breakage.
-    \item \textbf{Electrical safety:} The QA setup includes high-voltage power supplies and low-voltage function generators. Shifters must be trained in basic electrical safety, avoid contact with live circuits, and follow established procedures for connecting and disconnecting HV cables. The HV power supplies will be automatically turned off when not in use and the QA area will be clearly marked with appropriate signage. The splitters for PMT signal and HV will be enclosed in a protective casing to prevent accidental contact with high-voltage parts and located outside easy reach of shifters. 
-    \item \textbf{Workspace coordination:} The QA area is shared with other OD activities, including PMT assembly. Shifters must maintain clear access paths when moving equipment, and tasks should be coordinated to avoid interference or hazards.
-    \item \textbf{Emergency procedures:} Shifters must be familiar with emergency procedures, including evacuation routes, first aid locations, and contact information for emergency services.
+    \item \textbf{Manual handling:} PMTs are stored in boxes of six, weighing up to $13$\,kg. Individual PMTs are lightweight. Shifters must use proper lifting techniques and, where possible, use trolleys to transport PMT boxes between storage and the QA workspace.
+    \item \textbf{Working postures:} Loading and unloading PMTs into dark boxes requires bending and repetitive motions. Shifts are optimized to limit prolonged work in bent positions by any one shifter with regular breaks carrying other tasks.
+    \item \textbf{Fragile equipment:} PMTs are fragile and must be handled with care to avoid damage. Shifters should follow established procedures for handling PMTs and report any damage or issues to the shift leader immediately. Shifters will wear gloves and safety goggles when handling PMTs to protect against breakage.
+    \item \textbf{Sharp equipment:} The mounting spiders used during the PMT assembly have relatively sharp edges and can cause cuts. Shifter will wear protective gloves during assembly.
+    \item \textbf{Electrical safety:} The QA setup includes high- and low-voltage components; however, shifters only interact with SHV connectors and never with exposed HV elements. HV is applied only during measurements and is automatically turned off at the end of each measurement cycle. Before accessing PMTs, shifters are required to verify that HV is off using multiple independent checks: the HV monitoring software, the QA software (which enforces HV shutdown via the “Uninstall PMTs” procedure), and visual indicators on the power supply. In the event of software or hardware failure, the monitoring system will either automatically disable HV or display a warning message prompting the shifter to power down the system. The HV-signal splitters are enclosed in protective casings and positioned outside the reach of shifters. The QA area is clearly marked with “HV is ON” signage when HV is active.
+    \item \textbf{Workspace coordination:} Since the QA/assembly room is shared amongst multiple shifters, there will be clear access paths and separated working areas. The shift leaders will coordinate tasks to avoid interference or hazards.
+    \item \textbf{Emergency procedures:} Shifters must be familiar with evacuation routes, first aid locations, and emergency contacts. At least one Japanese-speaking person on shift (preferably the shift leader) is responsible for emergency coordination.
+\end{itemize}
+
+\subsection{Training} \label{sec:training}
+All training will be provided in person at the start of each shift block. If all participating shifters are already experienced in OD preparation shifts, the training may be reduced or omitted at the discretion of the shift leader.
+
+\subsubsection*{General training (all shifters):}
+Delivered by the shift leader, this includes:
+\begin{itemize}
+    \item Local safety procedures and emergency information
+    \item Safe handling of PMTs and fragile equipment
+    \item Manual handling and use of trolleys
+    \item Basic awareness of low- and high-voltage systems and associated hazards
+\end{itemize}
+
+\subsubsection*{Task-specific training:}
+\begin{itemize}
+    \item All shifters will be trained in PMT handling, transportation, and OD unit assembly
+    \item Only shifters assigned to QA will receive additional training on the QA procedures
+\end{itemize}
+
+\subsubsection*{Shift leader training:}
+Shift leaders will receive additional training from an experienced shift leader or an FD3 expert. This includes detailed instruction on the operation of QA software and hardware, including ADCs, HV systems, function generators, and LED control.mThey will also be trained in responsibilities related to shift coordination, safety oversight, and troubleshooting during OD preparation shifts. In addition, shift leaders are expected to understand the overall OD PMT workflow, including the delivery schedule and the interface between QA, assembly, and installation activities.
+
+\subsubsection*{FD3 expert training:}
+FD3 experts require advanced, in-person training from an existing FD3 expert in the relevant area (QA and/or assembly). This training covers detailed understanding of the hardware and software systems, as well as responsibilities for complex troubleshooting and major operational decisions. This training is expected to take place either at the University of Toyama or at a dedicated test facility (e.g. in the UK). 
+
+
+\subsection{Personal Protective Equipment (PPE)}
+\begin{itemize}
+    \item \textbf{Disposable gloves:} Nitrile gloves for handling PMTs\footnote{The exact type of gloves is not yet determined}
+    \item \textbf{Protective work gloves:} Cut-resistant or reinforced gloves for handling PMT mounting components
+    \item \textbf{Safety goggles:} For eye protection against accidental PMT breakage.
+    \item \textbf{Clean indoor shoes:} To maintain cleanliness in the QA/assembly and storage areas, in accordance with local room requirements.
 \end{itemize}
 
 %\FloatBarrier
 \bibliographystyle{unsrturl}
 \bibliography{ODPMTQATechNoteLiterature}
+
+\newpage
+\appendix
+\section{Appendix}
+\subsection{OD assembly instructions} \label{app:instructions}
+
+Please find the OD unit assembly instructions over the next few pages.
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.9\linewidth]{Documentation/QA_Shifts_Technote/figures/Assembly-page1.png}
+    \caption{Assembly instructions page 1}
+    \label{fig:assemblypage1}
+\end{figure}
+\begin{figure}
+    \centering
+    \includegraphics[width=0.9\linewidth]{Documentation/QA_Shifts_Technote/figures/Assembly-page2.png}
+    \caption{Assembly instructions page 2}
+    \label{fig:assemblypage2}
+\end{figure}
+\begin{figure}
+    \centering
+    \includegraphics[width=0.9\linewidth]{Documentation/QA_Shifts_Technote/figures/Assembly-page3.png}
+    \caption{Assembly instructions page 3}
+    \label{fig:assemblypage3}
+\end{figure}
+\begin{figure}
+    \centering
+    \includegraphics[width=0.9\linewidth]{Documentation/QA_Shifts_Technote/figures/Assembly-page4.png}
+    \caption{Assembly instructions page 4}
+    \label{fig:assemblypage4}
+\end{figure}
+
 \end{document}
