@@ -21,6 +21,7 @@
 \usepackage{placeins}  % for FloatBarrier
 \usepackage[nottoc,notlot,notlof]{tocbibind}
 \usetikzlibrary{decorations.pathreplacing}
+\usepackage[colorinlistoftodos]{todonotes}
 \usepackage{authblk} % To add authors' affiliations
 
 %%% Code to enter C++ code
@@ -44,8 +45,6 @@
 }
 
 %%% Set personal note commands
-\newcommand{\todo}[1]{\textcolor{red!90!black}{TO DO: \textit{#1}}}
-\newcommand{\note}[1]{\textcolor{green!70!black}{COMMENT: \textit{#1}}}
 \newcommand{\inches}{$''$\xspace}
 
 \author[1]{Róbert Králik}
@@ -85,6 +84,12 @@ HK has 40K inner detector PMTs (50 cm diameter) and 3600 outer detector PMTs (20
   \item Allowing for the some distortion of the repeating pattern near the edges of the endcaps it may be possible to add between 32 and 44 more PMTs, although this still needs to be confirmed with the installation group. 
 \end{itemize}
 
+Also explain that the OD PMTs will be matched by HV in groups of 3 due to the limitations of the electronics.
+
+From Shifts technote:
+
+The Hyper-K Outer Detector (OD) installation is due to begin in January~2027. Before then, 3650~OD PMTs will need to undergo quality assurance (QA) and be assembled together with wavelength-shifting (WLS) plates and tyvek sheets into OD PMT units. The OD PMT QA programme consists of a series of electrical and optical tests performed on every PMT after delivery, ensuring long-term reliable operation. PMTs that pass QA are then combined with a WLS plate, a mounting plate, and a 50~cm~$\times$~50~cm sheet of Tyvek to form an assembled OD PMT unit. All of these tasks will be performed at the University of Toyama and are grouped together as `OD Preparation Shifts'.
+
 \subsection{Schedule}
 
 The current plan is for PMTs to start arriving to the Univerity of Toyama in the end of July 2026, arriving in batches of 400 PMTs per month. The plan is to perform the QA on $\sim 450$ PMTs per month.
@@ -98,9 +103,34 @@ The current plan is for PMTs to start arriving to the Univerity of Toyama in the
 What are the important qualities of the OD PMTs that we want to test in the QA process?
 
 
+From the shifts technote:
+The OD preparation shifts are constrained by the PMT delivery schedule, shown in Tab.~\ref{tab:PMTDeliverySchedule}. The first delivery is planned for 24$^{\text{th}}$ July 2026. QA-only shifts are expected to begin in August 2026, with combined QA and assembly shifts starting in September.
+
+\begin{table}
+    \centering
+    \caption{Preliminary schedule of the OD PMT delivery as of January 2026.}
+    \label{tab:PMTDeliverySchedule}
+    \begin{tabular}{|m{25mm}|m{18mm}m{18mm}m{18mm}|m{12mm}|}\hline
+        \multirow{2}{25mm}{\textbf{Delivery date}} & \multicolumn{3}{|c|}{\textbf{Number of PMTs by cable length}} & \multirow{2}{*}{\textbf{Total}} \\
+         & \textbf{15 m} & \textbf{20 m} & \textbf{30 m} & \\ \hline
+        2026/07/24 & 80   & 0    & 220 & 300 \\
+        2026/08/21 & 300  & 0    & 0   & 300 \\
+        2026/09/25 & 0    & 300  & 0   & 300 \\
+        2026/10/23 & 400  & 0    & 0   & 400 \\
+        2026/11/27 & 0    & 400  & 0   & 400 \\
+        2026/12/25 & 400  & 0    & 0   & 400 \\\hline
+        2027/01/22 & 0    & 400  & 0   & 400 \\
+        2027/02/26 & 335  & 15   & 0   & 350 \\
+        2027/03/19 & 0    & 400  & 0   & 400 \\
+        2027/04/23 & 200  & 200  & 0   & 400 \\ \hline\hline 
+        Total      & 1715 & 1715 & 220 & 3650 \\\hline
+    \end{tabular}
+\end{table}
+
+
 \subsection{Pre-calibration}
 Connection to the pre-calibration.
-The pre-calibration of the OD PMTs will be done using the Australian setup with a robotic arm. The OD PMTs will be measured for positional and angular dependence, relative quantum (detection) efficiency, charge resolution, and more \todo{Describe what will be measured in the pre-calibration}. Due to a tight pre-calibration schedule, the pre-calibration of the OD PMTs will be done towards the end of the installation process and therefore we won't be able to use the pre-calibration results to select the PMTs for the QA process. The QA process will be used to select the PMTs that will be installed in the Hyper-K detector.
+The pre-calibration of the OD PMTs will be done using the Australian setup with a robotic arm. The OD PMTs will be measured for positional and angular dependence, relative quantum (detection) efficiency, charge resolution, and more \todo[inline]{Describe what will be measured in the pre-calibration}. Due to a tight pre-calibration schedule, the pre-calibration of the OD PMTs will be done towards the end of the installation process and therefore we won't be able to use the pre-calibration results to select the PMTs for the QA process. The QA process will be used to select the PMTs that will be installed in the Hyper-K detector.
 
 We will add additional measurements to the QA process that will be used instead of the pre-calibration for the PMTs that will be installed earlier.
 
@@ -114,18 +144,82 @@ Once all the measurements are finished, the box with the measured PMT is closed 
 List the requirements for the OD PMTs, their importance and relevance to the outer detector, things that we want to test in the QA process. For example, gain, dark rate, single PE spectrum, quantum efficiency, etc. Justify the reasoning behind the requirements and how they will be tested in the QA process. What other things we can do to test them.
 
 
+\subsection{PMT dimensions}
+
+Max. radius of the PMT is less than $80\pm2.0\,\text{mm}$ and the average length is $< 250\,\text{mm}$. The detailed description of the PMT is shown in Fig.~\ref{fig:PMT_dimensions}. The variation in length should be within $\pm 10\,\text{mm}$. The total weight of the PMT is $3.5\,\text{kg}$ for the $30\,\text{m}$ cable variant, which should be $<2.0\,\text{kg}$ for the PMT and $1.2\,\text{kg}$ for the cable. The cable is RG-58/U coaxial cable with diameter of $5.0\pm0.2\,\text{mm}$ and there are three PMT varieties based on the cable length based on their distance from the electronics vessel: $15\,\text{m}$, $20\,\text{m}$, and $30\,\text{m}$. The cable should withstand $> 1700\,\text{V}$.
+
+\begin{figure}
+  \centering
+  \includegraphics[width=\textwidth]{figures/HPK_R14374-33_TechnicalDrawing_Jan2026.png}
+  \caption{Dimensions of the 3'' OD PMT R14374-33 from Hamamatsu. All dimensions are in mm. The cable length described is only one of three versions. This is confidential information and should not be shared outside of the Hyper-K collaboration.}
+  \label{fig:PMT_dimensions}
+\end{figure}
+
+\todo[inline]{Should I describe the waterproofing of the PMTs?}
+
+\subsection{Gain and voltage}
+
+Supply High Voltage should be lower than 1500V and the target gain is $5 \times 10^6$. The PMT should be supplied by a positive high voltage (the cathode is grounded and the anode is at positive high voltage).
+
+We require the average operational voltage across all PMTs to be within 1100 and 1300 V, which should help matching of OD channels easier. However, for individual PMTs we only require that their operational voltage is between 900 and 1450 V.
+
+Also measure gain at 1450 V
+
+
+\subsection{Stability}
+gain stability, charge linearity, charge stability, flashers
+
+Flashers if they produce a signal of 10pe or more in a neighbouring PMT, both at operational voltage, if they're lower than 10pe, then they can be ignored as this can be filtered out in reconstruction.
+
+\subsection{Single photo-electron characteristics}
+
+\subsection{Dark rate}
+
+The maximum dark current of all PMTs is required to be 500 nA. The dark rate is required to be less than 2 kHz at $5 \times 10^6$ gain and $25^\circ$C, after one day of storage in darkness and at -1 mV threshold. The dark rate should be measured at the operational voltage of the PMT, which is defined as the voltage at which the gain is $5 \times 10^6$. The dark rate should be measured after the PMT has been left in the dark for at least 4 hours to allow it to stabilise. When the 2 kHz requirement is scaled to $14^\circ$C, which is the expected temperature of the PMTs in the Hyper-K detector, it corresponds to a dark rate of around 600 Hz.
+
+We also require that ramping up the PMT betwee the operational voltage and 1450 V, or turning the PMT on and off, will result in $<200\,\text{Hz}$ increase in the dark rate. We also require that the dark is stable over time within $<200\,\text{Hz}$ variation over a 1 week-long period at the operational voltage.
+
+Similarly, we require that the dark rate measured at gain of $5 \times 10^6$ and at gain of $10\times 10^7$ is stable within $<30\%$. Dark rate should not depend on gain.
+
+\todo[inline]{Verify this from the latest requirements. Also the PMT uniformity.}
+
+\subsection{Pulse shape}
+We require that the transit time spread (TTS) of the PMTs is less than 3 ns at gain of $5 \times 10^6$, since the WLS plate has a timescale in order of 10 ns, so the PMTs need to be faster than this.
+
+We require that the rise time of the PMT is less than 10 ns at gain of $5 \times 10^6$, which is the same as the inner detector PMTs. Hamamatsu claims a raise time of about 5 ns.
+
+\subsection{Magnetic field variation}
+We require the PMTs to have up to 10\% variation in collection efficiency at $150\,\text{mG}$. The initial Hamamatsu results show 10\% variation at 300 mG, but we will need to confirm this with our own measurements. We will not be able to measure and adjust the magnetic field in the QA room, but we will try to initiate measurements in other setups (such as the pre-calibration setup) that will allow us to measure the magnetic field variation of the PMTs.
+
+\subsection{Detection efficiency}
+The single photo detection efficiency (DE) is required to be $>20\%$ for illumination parallel to the PMT axis for light with wavelhisengths between 340 and 450 nm. The distribution of photons arriving at PMT surface in this range is flat.
+
+We require the PMTs to have $>85\%$ collection efficiency (CE), which for maximum quantum efficiency (QE) of $30\%$ corresponds to a DE of around $25\%$. Hamamatsu claims CE is $97\%$.
+
+The QE across the broad spectrum of interest (330 -- 510 nm) should be $>10\%$. Most photons, either direct or WLS-shifter, will have a wavelength within this range. We also require that the wavelength of the maximum QE is between 350 and 420 nm, which is the range of most of the photons that directly hit the PMT surface according to the simulation. We also require that the variation of the maximum QE across all the PMTs results in the average of max. QE being $>25\%$. Additionally, since most photos arriving from the WLS plates are around 250 nm, we require that the ratio of QE at 450 nm and max QE is $>50\%$. The ratio of direct photons are 350 nm compared to WLS photos at 450 nm is around 8:25, so if QE ratio is better than 50\%, we should observe ratio of around 8:12. This should ensure we get at least a 30\% increase in hits by using the WLS plates as indicated by the simulation.
+
+\subsection{Cathode uniformity}
+
+
+
 \section{Logistics}
 \subsection{Space at the University of Toyama}
-\todo{Add images of the location and the room}
+\todo[inline]{Add images of the location and the room}
 
 The space in the University of Toyama will be measured for magnetic field and the results will be used to decide where to place the QA equipment. The space is all ready for the QA process and the equipment will be shipped to Japan and installed in the first half of 2026. The space will be equipped with a dark box, a VME crate with HV and DAQ boards, and a computer with the data acquisition software.
 
-The windows in the OD preparation room were covered with a UV filter (which specific one?) to block the UV light and protect the PMTs from any potential damage. This filter also reflects about 60\% of infrared radiation, aiding in temperature control. The windows were then covered with blackout sheets to completely block any light from entering the room. The blackout sheets are made of ... and are attached to the windows with ...  See photo in Fig.\todo{Add photo of the window covers}.
+The windows in the OD preparation room were covered with a UV filter (which specific one?) to block the UV light and protect the PMTs from any potential damage. This filter also reflects about 60\% of infrared radiation, aiding in temperature control. The windows were then covered with blackout sheets to completely block any light from entering the room. The blackout sheets are made of ... and are attached to the windows with ...  See photo in Fig.\todo[inline]{Add photo of the window covers}.
 
 The floor in the OD preparation room has been covered with dark sheet ... to aid in cleanliness. See picture...
 
+\subsubsection{Magnetic field measurements}
+We measured the magnetic field of the QA room by Nakano-san and his students using the... device. The results are below.
+\todo[inline]{Add the results of the magnetic field measurements and the implications for the QA process}
+
 \subsection{Shifts}
 Reference the shifts technote and describe the necessary basics here.
+
+The QA shifts are part of the OD preparation shifts that are described in detail in ... 
 
 The QA shifts are expected to take ... hours, with the expectation that the shifters will be able to perform the QA measurements on their own. The shifts will be done in pairs to help with loading and unloading of the PMTS, as well as with transporting the PMTs between the storage and QA areas. The shifters will be expected to perform the measurements, check the results, and save them into the database and logbook.
 
@@ -332,23 +426,47 @@ The equipment will be shipped to Japan in the first half of 2026 and will be ins
 
 \subsection{Dark room and OD preparation room equipment}
 
-We constructed a dark room made out of 28\,mm steel pipes coated with plastic from ... The dark room is made to help with blocking out light, to clearly separate QA and other spaces, and to help with the cleanliness of the QA process and shield against dust. The dark room is 3x3.4m - large enough to fit both of the dark boxes perpendicular to each other, with enough space for the shifters to move around and perform the measurements. There is also additional room to fit a small box for additional measurements. The design of the dark room is shown in Fig. and the actual dark room is shown in Fig. \todo{Add photos of the dark room}.
+We constructed a dark room made out of 28\,mm steel pipes coated with plastic from ... The dark room is made to help with blocking out light, to clearly separate QA and other spaces, and to help with the cleanliness of the QA process and shield against dust. The dark room is 3x3.4m - large enough to fit both of the dark boxes perpendicular to each other, with enough space for the shifters to move around and perform the measurements. There is also additional room to fit a small box for additional measurements. The design of the dark room is shown in Fig. and the actual dark room is shown in Fig. \todo[inline]{Add photos of the dark room}.
 
 \subsection{Dark boxes}
-There are two dark boxes, each made out of 30x30\,mm aluminium profiles and 5\,mm thick aluminium sheets. The dark boxes are designed to be light tight and to block out any external light. The dark boxes are large enough to fit 28 PMTs at a time, with enough space for the shifters to move around and perform the measurements. The design of the dark boxes is shown in Fig. and the actual dark boxes are shown in Fig. \todo{Add photos of the dark boxes}.
+There are two dark boxes, each made out of 30x30\,mm aluminium profiles and 5\,mm thick aluminium sheets. The dark boxes are designed to be light tight and to block out any external light. The dark boxes are large enough to fit 28 PMTs at a time, with enough space for the shifters to move around and perform the measurements. The design of the dark boxes is shown in Fig. and the actual dark boxes are shown in Fig. \todo[inline]{Add photos of the dark boxes}.
 
 The dark boxes are from company KJN automation, with the exception of the two long aluminium profiles, which are sourced directly from Japan from company... as shipping them from UK to Japan proved expensive and difficult.
 
 \subsection{PMT stands}
 
-The PMT stands are fully 3D-printed, made out of black PLA plastic. 
+The PMT stands are fully 3D-printed, made out of black PLA plastic. Each stand consists of a PMT holder, PMT cap, and four legs.
+
+The PMT holder is designed to fit the base of the Hamamatsu PMT with an additional support from EPDM rubber bands that go around the neck of the holder, to add grip and prevent the PMT from sliding when moved. The holder has a wide enough opening to allow the waterproofed PMT base to pass through and a cut-out to innsert the PMT cable from the side. The holder has holes on each side to hold the PMT cap in place when not in use. It also contains holes for the screws to attach the legs.
+
+The PMT cap is designed to fit on top of the PMT and serves two purposes: holds the SMA905-terminated optical fibre in place on top of the PMT directing it to its centre, and covering the PMT to block external light.
+
+The legs are all ... long and 20mm wide in diameter with a hole in the middle for the screw to attach them to the holder. The legs are designed to be long enough to allow the stiff PMT cable to bend without much issues.
 
 \subsection{Power supply and readout}
+We are using five modules of CAEN V6521P power supply, which will allow us to power 30 PMTs at a time. The power supply will be controlled by the data acquisition software via the CAEN libraries. We are using two modules of CAEN VX1730SB ADCs, which will allow us to read out 32 PMTs at a time. The ADCs will be controlled by the data acquisition software via the CAEN libraries. The power supply and ADC modules are inside of a CAEN 8008X VME crate with a CAEN VX3718 VME communication module, which allows for connecting the connection to all the VME modules with a single USB-C, or CONET cable.
 
-\subsection{Signal-Voltage splitter}
-The Signal-Voltage splitters (referred to just as splitters) were produced by Akimichi Taketa (University of Tokyo). Their design is the same as used in PMT measurements at Kamioka in 2025.
+\subsection{Signal-Voltage splitter}\label{sec:SigVoltSplitter}
+The Signal-Voltage splitters (referred to just as splitters) were produced by Akimichi Taketa (University of Tokyo). Their design is similar to the ones used in PMT measurements at Kamioka in 2025.
+
+The splitters are designed to split the high voltage for powering the PMT and the signal readout. They consist of:
+\begin{itemize}
+  \item PCB board (size)
+  \item SHV connector for the PMT-side connection
+  \item Resistors
+  \item Capacitors
+  \item U.FL connector for the signal readout
+  \item Directly-attached 2m-long coaxial cable with SHV connector for the power supply connection
+\end{itemize}
 
 \subsection{Cables}
+On one side of the dark box, there are SHV adapters that allow to connect PMT cables from inside of the dark box to the outside. PMTs that are close to this side of the dark box are directly connected to the SHV adapters by shifters. For the PMTs that are futher away, the PMT cables are connected to 2m-long RG-58 "extension coaxial cables" with SHV connectors on both sides, that are then connected to SHV adapters.
+
+On the outside of the dark box, there are 4m-long RG-58 coaxial cables with SHV connectors on both sides, that direct the PMT signal and power supply outside of the dark room and into the signal-voltage splitters describe in Sec.~\ref{sec:SigVoltSplitter}.
+
+There is a directly-connect 2m-long coaxial cable that directs power from the HV power supply to the splitters.
+
+The signal part of the splitter is connected to an 0.15m-long U.FL - SMA cable. This is then connected to an SMA - BNC cable, which is then connected to a BNC - BNC adapter. This is then connected to 1m-long BNC - MCX cables, which are then connected to the ADCs.
 
 \subsection{Light source and optical fibres}
 
@@ -357,11 +475,14 @@ What LED are we going to use? Is this good enough?
 \subsection{Optical fibre assemblies}
 We received two optical fibre assemblies custom-made by our collaborators at the University of Victoria.
 
-\subsection{Computing}
+\subsection{Arbitrary function generator}
 Arbitrary function generator, computer with data acquisition software, and other computing equipment as needed.
 
+\subsection{Computer}
 
+\subsection{Label printers and scanners}
 
+We are using ... label printer and two handheld barcode scanners to scan the QR codes on the PMTs and the printed-codes on the boxes during the QA process. The information from the QR codes will be saved into the Hyper-K database and will be used to track the PMTs throughout the QA process and later during the installation process.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -372,6 +493,9 @@ Arbitrary function generator, computer with data acquisition software, and other
 \section{Shift software}
 
 \subsection{Data Acquisition software}
+
+The data acquisition software is based on the CAEN COMM, CAEN VME, CAEN HV, and CAEN\_digitizer libraries. The software was build and inspired by the CAEN WaveDump software. It is writte in C and C++.
+
 The data acquisition software is currently in development, but the idea is to have a simple GUI that will allow the shifters to perform the QA measurements, check the results, and save them into the database and logbook. The software will be able to communicate with the PMTs via CAEN libraries. The control of the function generator and the LEDs will be done manually, but the software will be able to control the PMTs and the data acquisition process.
 
 \subsection{Graphical User Interface}
@@ -405,7 +529,7 @@ If there are any serious issues with the PMT, we will send the details to the ma
 Time: 1 min / PMT $\rightarrow$ 30 minutes for one batch of 28 PMTs
 
 \subsection{Voltage scan / Gain measurement}
-\note{How many voltage points do we want to take?}
+\todo[inline]{How many voltage points do we want to take?}
 Time: $\sim$6 min / voltage point for all PMTs $\rightarrow$ ~60 minutes for all PMTs including analysis
 
 \subsection{Single Photo Electron measurements}
