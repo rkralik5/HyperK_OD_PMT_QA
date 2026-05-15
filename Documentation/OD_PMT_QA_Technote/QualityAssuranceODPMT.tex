@@ -167,11 +167,13 @@ Also measure gain at 1450 V
 
 
 \subsection{Stability}
-gain stability, charge linearity, charge stability, flashers
+We require that there are no flasher PMTs. We define flashers as PMTs that produce a signal of 10 photo-electrons or more in a neighbouring PMT, while both are at operational voltage. If the recorded signal is lower than 10 photo-electrons, they can be ignored as we are able to filtered this effect out in later reconstruction.
 
-Flashers if they produce a signal of 10pe or more in a neighbouring PMT, both at operational voltage, if they're lower than 10pe, then they can be ignored as this can be filtered out in reconstruction.
+We require that the PMT response for different charge inputs is linear within $<10\%$, up to a 50 photo-electron light input. Only 0.2\% of hits in the OD are above 50 photo-electrons. We also require that the PMT do not experience charge saturation under $<50$ photo-electron signal.
+\todo[inline]{Is this really what the requirement on charge saturation means?}
 
 \subsection{Single photo-electron characteristics}
+The ratio of the single photo-electron charge distribution's peak hight, and of the valley between the single photo-electron peak and the pedestal, should be $>1.8$ for all PMTs, and its average over all the PMTs should be $>2.0$. The charge resolution of the single photo-electron signal should be $<50\%$.
 
 \subsection{Dark rate}
 
@@ -186,7 +188,9 @@ Similarly, we require that the dark rate measured at gain of $5 \times 10^6$ and
 \subsection{Pulse shape}
 We require that the transit time spread (TTS) of the PMTs is less than 3 ns at gain of $5 \times 10^6$, since the WLS plate has a timescale in order of 10 ns, so the PMTs need to be faster than this.
 
-We require that the rise time of the PMT is less than 10 ns at gain of $5 \times 10^6$, which is the same as the inner detector PMTs. Hamamatsu claims a raise time of about 5 ns.
+We require that the rise time of the PMT is less than 10 ns at gain of $5 \times 10^6$, which is the same as the inner detector PMTs. Hamamatsu claims a raise time of about 5 ns. We also require that a 20 photoelectron signal had $95\%$ of its total charge accumulated within $100\,\text{ns}$.
+
+The overshoot should be within $<0.5\,\text{mV}$ outside of $200\,\text{ns}$ in order to suppress fake triggers. The afterpulse for a 5 photo-electron light should be $<30\%$ within a $10\,\mu\text{s}$ window and at $-3.0\,\text{mV}$ threshold.
 
 \subsection{Magnetic field variation}
 We require the PMTs to have up to 10\% variation in collection efficiency at $150\,\text{mG}$. The initial Hamamatsu results show 10\% variation at 300 mG, but we will need to confirm this with our own measurements. We will not be able to measure and adjust the magnetic field in the QA room, but we will try to initiate measurements in other setups (such as the pre-calibration setup) that will allow us to measure the magnetic field variation of the PMTs.
@@ -199,31 +203,10 @@ We require the PMTs to have $>85\%$ collection efficiency (CE), which for maximu
 The QE across the broad spectrum of interest (330 -- 510 nm) should be $>10\%$. Most photons, either direct or WLS-shifter, will have a wavelength within this range. We also require that the wavelength of the maximum QE is between 350 and 420 nm, which is the range of most of the photons that directly hit the PMT surface according to the simulation. We also require that the variation of the maximum QE across all the PMTs results in the average of max. QE being $>25\%$. Additionally, since most photos arriving from the WLS plates are around 250 nm, we require that the ratio of QE at 450 nm and max QE is $>50\%$. The ratio of direct photons are 350 nm compared to WLS photos at 450 nm is around 8:25, so if QE ratio is better than 50\%, we should observe ratio of around 8:12. This should ensure we get at least a 30\% increase in hits by using the WLS plates as indicated by the simulation.
 
 \subsection{Cathode uniformity}
+We require that the variation of a single photo-electron detection effieciency across the photocathode surface is within $\pm10\%$. This has to be true for light source with wavelength between $350 -- 420\,\text{nm}$, with a $5\,\text{mm}$ spot size, and within a $0 -- 32\,\text{mm}$ radius from the centre of the PMT.
 
+Since we will collect significant portion of our light from WLS plates connected at the edges of the PMT, we also require that all PMTs have at most a $\pm15\%$ variation with respect to the centre of the PMT, using a single photo-electron light with wavelength $430--460\,\text{nm}$ and a $5\,\text{mm}$ sport size. The radius of the WLS region is defined as $32 -- 37\,\text{mm}$ from the centre of the PMT.
 
-
-\section{Logistics}
-\subsection{Space at the University of Toyama}
-\todo[inline]{Add images of the location and the room}
-
-The space in the University of Toyama will be measured for magnetic field and the results will be used to decide where to place the QA equipment. The space is all ready for the QA process and the equipment will be shipped to Japan and installed in the first half of 2026. The space will be equipped with a dark box, a VME crate with HV and DAQ boards, and a computer with the data acquisition software.
-
-The windows in the OD preparation room were covered with a UV filter (which specific one?) to block the UV light and protect the PMTs from any potential damage. This filter also reflects about 60\% of infrared radiation, aiding in temperature control. The windows were then covered with blackout sheets to completely block any light from entering the room. The blackout sheets are made of ... and are attached to the windows with ...  See photo in Fig.\todo[inline]{Add photo of the window covers}.
-
-The floor in the OD preparation room has been covered with dark sheet ... to aid in cleanliness. See picture...
-
-\subsubsection{Magnetic field measurements}
-We measured the magnetic field of the QA room by Nakano-san and his students using the... device. The results are below.
-\todo[inline]{Add the results of the magnetic field measurements and the implications for the QA process}
-
-\subsection{Shifts}
-Reference the shifts technote and describe the necessary basics here.
-
-The QA shifts are part of the OD preparation shifts that are described in detail in ... 
-
-The QA shifts are expected to take ... hours, with the expectation that the shifters will be able to perform the QA measurements on their own. The shifts will be done in pairs to help with loading and unloading of the PMTS, as well as with transporting the PMTs between the storage and QA areas. The shifters will be expected to perform the measurements, check the results, and save them into the database and logbook.
-
-There should be at least one experienced shift leader near or in Toyama at all times, who will be able to help with the measurements and answer any questions that the shifters might have. The shift leader will also be responsible for checking the results of the measurements and making sure that they are correctly saved into the database and logbook.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -232,6 +215,8 @@ There should be at least one experienced shift leader near or in Toyama at all t
 %%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Quality Assurance procedure}\label{secQAProcedure}
+
+Based on our PMT requirements, we designed the QA to ensure that the PMTs satisfy them and that they will perform up to the required standard within the Hyper-K detector.
 
 General overview of the QA procedures, what measurements we want to do, how much time will each measurement take, how will the day-to-day of the QA shift look like, how many PMTs do we plan to measure,,..?
 
@@ -308,7 +293,8 @@ Also describe the integration with the HK database and the shift system, expecta
 \end{enumerate}
 
 \subsection{From Stephane}
-Once installed within Hyper-K, the cavity will be filled with water and the photo-sensing units will not be accessible, so it is essential to ensure that each component of the system performs as expected prior to installation and will continue to do so for the next decades. This section describes the planned QA/QC testing procedure for the 3\inches PMTs that can be divided into two parts: ``Batch tests'' as detailed in Table~\ref{tab:PMTbatchtests} that are performed on every PMT and more detailed ``Characterisation tests'' as detailed in Table~\ref{tab:PMTchartests} that are performed on $\approx 1$\% of the total number of PMTs purchased.\footnote{It may be necessary to review this suite of measurements for feasibility. It may not be possible, for example, to pressure test the PMTs at this stage.}
+Once installed within Hyper-K, the cavity will be filled with water and the photo-sensing units will not be accessible, so it is essential to ensure that each component of the system performs as expected prior to installation and will continue to do so for the next decades. This section describes the planned QA/QC testing procedure for the 3\inches PMTs that can be divided into two parts: ``Batch tests'' as detailed in Table~\ref{tab:PMTbatchtests} that are performed on every PMT and more detailed ``Characterisation tests'' as detailed in Table~\ref{tab:PMTchartests} that are performed on $\approx 1$\% of the total number of PMTs purchased.
+
 The PMTs must pass the batch tests to be installed in the detector, and characterisation tests will only be performed on PMTs that pass the batch test criteria. All characteristics of each PMT, including manufacturer's information and measurements from the QA/QC test-stands, would be stored in separate tables in the central Hyper-K QA/QC database currently being developed. We plan to use and adapt tools developed by the PMT group (collaborating with the 50\,cm PMT and mPMT development work). For instance, the {\it{control}} parameters of the QC are the measured gain parameters. They will be important such that PMTs with similar gains can be matched to the same electronics box for ease of tuning. We would perform a basic statistical analysis of the measurements for each batch of PMTs received to ensure that, on average, the PMTs are consistent with the manufacturer's specifications. On an individual basis, PMTs failing to meet the QA/QC requirements would be excluded from installation in the Hyper-K detector.  The number of PMTs rejected due to failure of the batch tests should be significantly less than 10\%.
 
 \begin{table}[!htb]
@@ -377,16 +363,43 @@ A further important property to test is the waterproofing and pressure rating of
 
 
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%
+%%%                                Logistics
+%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Logistics}
+\subsection{Space at the University of Toyama}
+\todo[inline]{Add images of the location and the room}
+
+The space in the University of Toyama will be measured for magnetic field and the results will be used to decide where to place the QA equipment. The space is all ready for the QA process and the equipment will be shipped to Japan and installed in the first half of 2026. The space will be equipped with a dark box, a VME crate with HV and DAQ boards, and a computer with the data acquisition software.
+
+The windows in the OD preparation room were covered with a UV filter (which specific one?) to block the UV light and protect the PMTs from any potential damage. This filter also reflects about 60\% of infrared radiation, aiding in temperature control. The windows were then covered with blackout sheets to completely block any light from entering the room. The blackout sheets are made of ... and are attached to the windows with ...  See photo in Fig.\todo[inline]{Add photo of the window covers}.
+
+The floor in the OD preparation room has been covered with dark sheet ... to aid in cleanliness. See picture...
+
+\subsubsection{Magnetic field measurements}
+We measured the magnetic field of the QA room by Nakano-san and his students using the... device. The results are below.
+\todo[inline]{Add the results of the magnetic field measurements and the implications for the QA process}
+
+\subsection{Shifts}
+Reference the shifts technote and describe the necessary basics here.
+
+The QA shifts are part of the OD preparation shifts that are described in detail in ... 
+
+The QA shifts are expected to take ... hours, with the expectation that the shifters will be able to perform the QA measurements on their own. The shifts will be done in pairs to help with loading and unloading of the PMTS, as well as with transporting the PMTs between the storage and QA areas. The shifters will be expected to perform the measurements, check the results, and save them into the database and logbook.
+
+There should be at least one experienced shift leader near or in Toyama at all times, who will be able to help with the measurements and answer any questions that the shifters might have. The shift leader will also be responsible for checking the results of the measurements and making sure that they are correctly saved into the database and logbook.
+
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%
-%%%                             Shift Hardware
+%%%                              Hardware
 %%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-
 \section{Hardware}
 The most up-to-date list of equipment is on this Google sheet: https://docs.google.com/spreadsheets/d/1KQ48t4xsHQqkxNsDdfh1FdT1ZlgbhRVdc6XN2WaHScI/edit?usp=sharing 
 
@@ -487,10 +500,10 @@ We are using ... label printer and two handheld barcode scanners to scan the QR 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%
-%%%                             Shift Software
+%%%                               Software
 %%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Shift software}
+\section{Software}
 
 \subsection{Data Acquisition software}
 
